@@ -2,7 +2,7 @@
 
 A modern, high-fidelity cost estimation tool for the WhatsApp Cloud API. This application helps businesses accurately calculate their potential messaging costs across different conversation categories and global regions using live exchange rates.
 
-![Project Preview](https://raw.githubusercontent.com/lucide-react/lucide/main/icons/calculator.svg) <!-- Placeholder for actual screenshot if available -->
+![Live Demo](https://whatsapp-cloud-api-cost-calculator.vercel.app/) <!-- Placeholder for actual screenshot if available -->
 
 ## ✨ Features
 
@@ -33,7 +33,7 @@ A modern, high-fidelity cost estimation tool for the WhatsApp Cloud API. This ap
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/fahim27/cloud_api_costing.git
 cd cloud_api_costing
 ```
 
