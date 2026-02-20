@@ -2,7 +2,7 @@
 
 A modern, high-fidelity cost estimation tool for the WhatsApp Cloud API. This application helps businesses accurately calculate their potential messaging costs across different conversation categories and global regions using live exchange rates.
 
-![Live Demo](https://whatsapp-cloud-api-cost-calculator.vercel.app/) <!-- Placeholder for actual screenshot if available -->
+# Live Demo - https://whatsapp-cloud-api-cost-calculator.vercel.app <!-- Placeholder for actual screenshot if available -->
 
 ## ✨ Features
 
