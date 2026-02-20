@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🟢 WhatsApp Cloud API Cost Calculator
 
-## Getting Started
+A modern, high-fidelity cost estimation tool for the WhatsApp Cloud API. This application helps businesses accurately calculate their potential messaging costs across different conversation categories and global regions using live exchange rates.
 
-First, run the development server:
+![Project Preview](https://raw.githubusercontent.com/lucide-react/lucide/main/icons/calculator.svg) <!-- Placeholder for actual screenshot if available -->
 
+## ✨ Features
+
+- **🎯 Precision Estimation**: 4-step interactive flow to calculate costs based on Country, Conversation Type, Template Category, and Customer Volume.
+- **💱 Live Currencies**: Integrated live exchange rates to provide costs in both USD and local currencies (BDT, INR, GBP, EUR, etc.).
+- **🧩 Smart Categories**: Handles all Meta conversation types:
+  - **Marketing**: Outbound promotions.
+  - **Utility**: Transactional updates.
+  - **Authentication**: Secure OTPs.
+  - **Service**: Customer-initiated support (including the **1,000 free conversation tier** logic).
+- **🎨 Premium UI/UX**:
+  - Glassmorphic design with subtle animations using `framer-motion`.
+  - Custom Portal-based dropdowns to prevent Z-index and overflow clipping.
+  - Fully responsive layout for Desktop and Mobile.
+- **📚 Educational Content**: A detailed breakdown of Meta's 24-hour conversation window billing logic and rate comparison tables.
+- **🔍 SEO Optimized**: Comprehensive metadata for search engines and social sharing.
+
+## 🚀 Tech Stack
+
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **State Management**: React Hooks (useState, useMemo, useCallback)
+- **Utilities**: `clsx`, `tailwind-merge`
+
+## 🛠️ Local Development
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd cloud_api_costing
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Run the development server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Project Structure
 
-## Learn More
+```text
+├── app/                  # Next.js App Router (Layout & Pages)
+├── components/           # Reusable UI Components
+│   ├── Calculator.jsx    # The core pricing engine
+│   ├── Hero.jsx          # Engaging intro section
+│   └── Explanation.jsx   # Detailed billing guide
+├── constants/            # Billing rates and country data
+├── utils/                # Helper functions (Currency conversion, etc.)
+└── public/               # Static assets
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📈 How it Calculates
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The calculator follows Meta's official conversation-based pricing model:
+1.  **Window**: Opens a 24-hour window on the first message.
+2.  **Category**: Billed once per category per window.
+3.  **Country**: Rate is determined by the recipient's country code.
+4.  **Free Tier**: Automatically deducts the first 1,000 Service (user-initiated) conversations each month.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with ❤️ for professional businesses scaling with WhatsApp Cloud API.
